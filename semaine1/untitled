@@ -1,0 +1,26 @@
+const readline = require('readline');
+
+const rl = readline.createInterface({
+	input: process.stdin,
+	output: process.stdout
+});
+
+intAnswer = 0;
+
+function isNumber(n) {
+	return !isNaN(parseFloat(n)) && isFinite(n);
+}
+
+function askAnswer() {
+	check = rl.question('What do you answer? ', (intAnswer) => {
+		rl.close();
+	});
+	return intAnswer;
+}
+
+function findAnsweredIntGame() {
+	console.log('Try to find the number between 1 and 100 ! (answer is '+intToFind+')');
+	askAnswer();
+}
+
+findRandomIntGame();
