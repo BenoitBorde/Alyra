@@ -5,10 +5,6 @@ const rl = readline.createInterface({
 	output: process.stdout
 });
 
-function isNumber(n) {
-	return !isNaN(parseFloat(n)) && isFinite(n);
-}
-
 function askAnswer() {
 	check = rl.question('Please enter a number between 1 and 100. I will try to find it! ', (intAnswer) => {
 		if (intAnswer < 1 || intAnswer > 100) {
